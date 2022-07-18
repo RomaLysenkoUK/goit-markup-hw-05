@@ -41,7 +41,7 @@
         <section class="hero section overlay">
             <div class="container ">
                 <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-btn">Заказать услугу</button>
+                <button type="button" class="hero-btn" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="future section">
@@ -75,9 +75,24 @@
             <div class="container">
                 <h2 class="section-tittle work-tittle">Чем мы занимаемся</h2>
                 <ul class="list work-list">
-                    <li class="work-item"><img src="./images/img.jpg" alt="kartinka1" width="370" height="294"></li>
-                    <li class="work-item"><img src="./images/img-1.jpg" alt="kartinka2" width="370" height="294"></li>
-                    <li class="work-item"><img src="./images/img-2.jpg" alt="kartinka3" width="370" height="294"></li>
+                    <li class="work-item">
+                        <div class="work-item-box">
+                            <img src="./images/img.jpg" alt="kartinka1" width="370" height="294">
+                            <h3 class="work-item-text">Десктопні додатки</h3>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-item-box">
+                            <img src="./images/img-1.jpg" alt="kartinka2" width="370" height="294">
+                            <h3 class="work-item-text">Мобільні додатки</h3>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-item-box">
+                            <img src="./images/img-2.jpg" alt="kartinka3" width="370" height="294">
+                            <h3 class="work-item-text">Дизайнерські рішення</h3>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -319,6 +334,17 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" type="button" data-modal-close>
+                <svg class="modal-btn-icon">
+                    <use href="./images/symbol-defs.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
