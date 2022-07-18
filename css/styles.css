@@ -107,6 +107,14 @@ img {
     display: flex;
 }
 
+.site-nav-thumb {
+    position: relative;
+}
+
+.item {
+    position: relative;
+}
+
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -120,6 +128,20 @@ img {
 
     display: flex;
     margin-right: 93px;
+}
+
+.hover-attribute::before {
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+
+
+
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
 }
 
 .nav-link {
@@ -250,6 +272,33 @@ img {
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.partf-item-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.partf-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: 0;
+
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition: transform 250ms ease-in-out;
+}
+
 
 .btn-active {
     background: var(--accent-color);
@@ -552,9 +601,14 @@ img {
     border: 1px solid #EEEEEE;
 }
 
+.partf-item:hover .partf-item-overlay {
+    transform: translateY(0);
+}
+
 .partf-item:hover,
 .partf-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 .partf-text {
@@ -712,4 +766,12 @@ img {
 .modal-btn-icon {
     width: 11px;
     height: 11px;
+}
+
+.modal-btn:hover {
+    color: var(--accent-color);
+}
+
+.modal-btn:hover>.modal-btn-icon {
+    fill: currentColor;
 }
